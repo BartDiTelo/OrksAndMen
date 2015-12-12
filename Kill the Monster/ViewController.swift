@@ -14,10 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerAtkLbl: UILabel!
     @IBOutlet weak var enemyAtkLbl: UILabel!
     @IBOutlet weak var infoLbl: UILabel!
+    @IBOutlet weak var startLbl: UILabel!
+    @IBOutlet weak var enemy: UIImageView!
+    @IBOutlet weak var player: UIImageView!
+    @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        infoLbl.text = "Tap a button to start another game!"
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +33,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onEnemyButtonPressed(sender: AnyObject) {
+    }
+    
+    @IBAction func onStartPressed(sender: AnyObject) {
+        hideShowOnStart()
+    }
+    
+    func hideShowOnStart () {
+        enemy.hidden = false
+        player.hidden = false
+        startButton.hidden = true
+        startLbl.hidden = true
+        playerAtkLbl.hidden = false
+        enemyAtkLbl.hidden = false
+        infoLbl.text = "Tap attack to strike!"
     }
 }
 

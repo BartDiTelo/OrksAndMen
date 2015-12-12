@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" constant="440" id="w4z-L1-mgH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap a button to start another game!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-uS-EOY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-uS-EOY">
                                 <rect key="frame" x="98" y="559" width="405" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,6 +82,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nd-ER-KDj">
                                 <rect key="frame" x="167" y="180" width="266" height="78"/>
                                 <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="onStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lox-MV-SoZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puu-KO-nyh">
                                 <rect key="frame" x="279" y="208" width="42" height="21"/>
@@ -128,9 +131,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="enemy" destination="3sm-i5-sUX" id="ecg-mA-okg"/>
                         <outlet property="enemyAtkLbl" destination="4QS-eg-3Ig" id="ddm-L9-ItA"/>
                         <outlet property="infoLbl" destination="2m5-uS-EOY" id="I24-6P-Cov"/>
+                        <outlet property="player" destination="kPh-ss-a51" id="XrT-3Q-50j"/>
                         <outlet property="playerAtkLbl" destination="gv8-w3-og3" id="Zgo-Yu-6XB"/>
+                        <outlet property="startButton" destination="2nd-ER-KDj" id="vE1-hl-ALn"/>
+                        <outlet property="startLbl" destination="Puu-KO-nyh" id="1Xs-lY-7jY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
