@@ -24,9 +24,25 @@ class Character {
         }
     }
     
+    var isAlive: Bool {
+        get {
+            if health <= 0 {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+    
     init(startingHealth: Int, attackPower: Int) {
         self._health = startingHealth
         self._attackPower = attackPower
+    }
+    
+    func attemptAttack(attackPower: Int) -> Bool {
+        self._health -= attackPower
+        
+        return true
     }
     
 }
